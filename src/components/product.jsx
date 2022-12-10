@@ -1,15 +1,11 @@
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
 
-function Product() {
+function Product(props) {
     return (
         <div className="product">
-            <img
-                src="https://picsum.photos/
-/200/200"
-                alt="products"
-            />
-            <h5>Product 1</h5>
+            <img src={props.img} alt="products" />
+            <h5>{props.title}</h5>
             <label>8.99$</label>
             <QuantityPicker />
             <button>Add to Cart</button>
