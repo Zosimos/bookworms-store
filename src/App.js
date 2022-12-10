@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./components/navBar";
+import Footerbar from "./components/footerBar";
+import Catalog from "./pages/catalog";
 
+//^Import component from navBar.jsx
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavBar />
+            <div className="page-content">
+                <Catalog />
+            </div>
+            <Footerbar />
+        </div>
+    );
 }
 
 export default App;
+
+//open comand prompt, type cd and drag and drop project file.
+//type npm start

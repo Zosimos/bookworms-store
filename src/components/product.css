@@ -1,0 +1,18 @@
+.product {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 220px;
+    display: inline-block;
+    margin-right: 15px;
+    background-color: aquamarine;
+}
+
+.product:hover {
+    border:5px solid black;
+}
+
+.product h5 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
