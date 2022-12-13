@@ -19,7 +19,13 @@ function Catalog() {
 
             <div className="products">
                 {products.map((prod) => (
-                    <Product title={prod.title} img={prod.image} />
+                    <Product
+                        // title={prod.title}
+                        // img={prod.image}
+                        // author={prod.author}
+                        // price={prod.price}
+                        data={prod}
+                    />
                 ))}
             </div>
         </div>
