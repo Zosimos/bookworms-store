@@ -1,3 +1,5 @@
+import "./home.css";
+
 function Home() {
     return (
         <div className="home">
@@ -6,6 +8,9 @@ function Home() {
                 alt="bookworm"
             />
             <h1>Welcome to Bookworms!</h1>
+            <h3>
+                <a href="/catalog">Click here to browse our catalog</a>
+            </h3>
         </div>
     );
 }

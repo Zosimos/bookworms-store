@@ -3,8 +3,8 @@ function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
-                    Navbar
+                <a className="navbar-brand" href="/home">
+                    Bookworms 🐛
                 </a>
                 <button
                     className="navbar-toggler"
@@ -26,17 +26,27 @@ function NavBar() {
                             <a
                                 className="nav-link active"
                                 aria-current="page"
-                                href="#"
+                                href="/home"
                             >
                                 Home
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                Link
+                            <a className="nav-link" href="catalog">
+                                Catalog
                             </a>
                         </li>
-                        <li className="nav-item dropdown">
+                        <li className="nav-item">
+                            <a className="nav-link" href="/contact">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/cart">
+                                Cart
+                            </a>
+                        </li>
+                        {/* <li className="nav-item dropdown">
                             <a
                                 className="nav-link dropdown-toggle"
                                 href="#"
@@ -44,17 +54,20 @@ function NavBar() {
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Dropdown
+                                More
                             </a>
                             <ul className="dropdown-menu">
                                 <li>
-                                    <a className="dropdown-item" href="#">
-                                        Action
+                                    <a
+                                        className="dropdown-item"
+                                        href="/contact"
+                                    >
+                                        Contact
                                     </a>
                                 </li>
                                 <li>
                                     <a className="dropdown-item" href="#">
-                                        Another action
+                                        Cart
                                     </a>
                                 </li>
                                 <li>
@@ -69,7 +82,7 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link disabled">Disabled</a>
-                        </li>
+                        </li> */}
                     </ul>
                     <form className="d-flex" role="search">
                         <input

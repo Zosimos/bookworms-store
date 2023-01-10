@@ -21,5 +21,8 @@ in CLI  git push -u origin master
     #any time after this first push
     git push
 
+    start react project
+    npm start in CLI
+
     install bootstrap in react project
     in cli npm install bootstrap

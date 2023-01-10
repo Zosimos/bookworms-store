@@ -5,6 +5,7 @@ import Catalog from "./pages/catalog";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Cart from "./pages/cart";
+import Test from "./pages/test";
 //import bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/catalog" element={<Catalog />}></Route>
                         <Route path="/contact" element={<Contact />}></Route>
                         <Route path="/cart" element={<Cart />}></Route>
+                        <Route path="/test" element={<Test />}></Route>
                     </Routes>
                 </div>
                 <Footerbar />

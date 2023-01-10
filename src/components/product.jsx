@@ -8,13 +8,17 @@ function Product(props) {
         console.log("Price Total", qty);
         setQuantity(qty);
     }
+    function getTotal() {
+        let total = props.data.price * quantity;
+        return total.toFixed(2);
+    }
     return (
         <div className="product">
             <img src={props.data.image} alt="products" />
             <h5>{props.data.title}</h5>
             <h6>{props.data.author}</h6>
             <div className="prices">
-                <label>Total:${props.data.price.toFixed(2) * quantity}</label>
+                <label>Total:${getTotal()} </label>
                 <label>Price:${props.data.price.toFixed(2)}</label>
             </div>
             <QuantityPicker onChange={addTotal} />

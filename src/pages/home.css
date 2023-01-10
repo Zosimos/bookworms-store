@@ -1,0 +1,8 @@
+.home a {
+    color: green;
+    text-decoration: none;
+}
+
+.home a:hover {
+    color:blue;
+}
