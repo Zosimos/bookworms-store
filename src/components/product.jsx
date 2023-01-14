@@ -18,7 +18,7 @@ function Product(props) {
     }
     function handleAdd() {
         console.log("Button Clicked", props.data);
-        addProductToCart(); //call the global function
+        addProductToCart(props.data); //call the global function
     }
     return (
         <div className="product">

@@ -1,0 +1,26 @@
+.cart img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 150px;
+}
+
+.cart .prod-row{
+    background-color: beige;
+    display:flex;
+    margin-bottom: 10px 30px;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.prod-row h6 {
+    flex: 4;
+}
+.prod-row label {
+    flex:2;
+}
+
+.prod-row button {
+    flex: 1;
+}
+

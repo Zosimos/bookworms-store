@@ -1,11 +1,18 @@
 import "./navBar.css";
+import { useContext } from "react";
+import DataContext from "../store/dataContext";
+
+import { Link } from "react-router-dom";
+
 function NavBar() {
+    const cart = useContext(DataContext).cart;
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/home">
+                <Link className="navbar-brand" to="/home">
                     Bookworms 🐛
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -23,80 +30,76 @@ function NavBar() {
                 >
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className="nav-link active"
                                 aria-current="page"
-                                href="/home"
+                                to="/home"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="catalog">
+                            <Link className="nav-link" to="catalog">
                                 Catalog
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/contact">
+                            <Link className="nav-link" to="/contact">
                                 Contact Us
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">
+                            <Link className="nav-link" to="/cart">
                                 Cart
-                            </a>
+                            </Link>
                         </li>
                         {/* <li className="nav-item dropdown">
-                            <a
+                            <Link
                                 className="nav-link dropdown-toggle"
-                                href="#"
+                                to="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
                                 More
-                            </a>
+                            </Link>
                             <ul className="dropdown-menu">
                                 <li>
-                                    <a
+                                    <Link
                                         className="dropdown-item"
-                                        href="/contact"
+                                        to="/contact"
                                     >
                                         Contact
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link className="dropdown-item" to="#">
                                         Cart
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <hr className="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link className="dropdown-item" to="#">
                                         Something else here
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
+                            <Link className="nav-link disabled">Disabled</Link>
                         </li> */}
                     </ul>
                     <form className="d-flex" role="search">
-                        <input
-                            className="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button
-                            className="btn btn-outline-success"
-                            type="submit"
-                        >
-                            Search
-                        </button>
+                        <Link to="/cart">
+                            <button className="btn btn-outline-dark">
+                                Cart &nbsp;
+                                <span className="badge bg-warning">
+                                    {cart.length}
+                                </span>
+                            </button>
+                        </Link>
                     </form>
                 </div>
             </div>
