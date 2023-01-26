@@ -7,11 +7,15 @@ function Catalog() {
     //need to call command onload, but react does not use init. React use "useEffect"
     const [products, setProducts] = useState([]);
     useEffect(() => {
+        loadData();
+    }, []);
+
+    async function loadData() {
         console.log("Catalog loaded");
         let service = new DataService();
-        let prodList = service.getCatalog();
+        let prodList = await service.getCatalog();
         setProducts(prodList);
-    }, []);
+    }
     return (
         <div className="catalog">
             <h3>Check out our amazing books!</h3>
